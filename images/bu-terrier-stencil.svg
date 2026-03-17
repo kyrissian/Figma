@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 180" width="320" height="180">
+  <defs>
+    <mask id="logo-mask">
+      <!-- White = visible (filled), Black = transparent (cut out) -->
+      <rect width="320" height="180" fill="white"/>
+
+      <!-- Cut out inner border area to make border thinner/cleaner -->
+      <rect x="10" y="10" width="300" height="160" rx="13" fill="black"/>
+      <rect x="14" y="14" width="292" height="152" rx="11" fill="white"/>
+
+      <!-- Cut out divider gap -->
+      <rect x="150" y="20" width="6" height="140" fill="black"/>
+
+      <!-- BU text cutout -->
+      <text x="80" y="112" text-anchor="middle" font-family="Georgia, serif" font-size="80" font-weight="bold" fill="black" letter-spacing="-2">BU</text>
+
+      <!-- HEAD cutout -->
+      <ellipse cx="236" cy="95" rx="52" ry="48" fill="black"/>
+
+      <!-- White blaze — filled back in -->
+      <ellipse cx="236" cy="100" rx="25" ry="30" fill="white"/>
+
+      <!-- Ears cutout -->
+      <polygon points="194,72 180,40 210,62" fill="black"/>
+      <polygon points="278,72 292,40 262,62" fill="black"/>
+
+      <!-- Ear inner — filled back in -->
+      <polygon points="194,70 183,48 207,64" fill="white"/>
+      <polygon points="278,70 289,48 265,64" fill="white"/>
+
+      <!-- Eyes outer — filled back in -->
+      <circle cx="220" cy="86" r="9" fill="white"/>
+      <circle cx="252" cy="86" r="9" fill="white"/>
+
+      <!-- Eye pupils cutout -->
+      <circle cx="221" cy="86" r="6" fill="black"/>
+      <circle cx="253" cy="86" r="6" fill="black"/>
+
+      <!-- Eye shine — filled back in -->
+      <circle cx="223" cy="83" r="2" fill="white"/>
+      <circle cx="255" cy="83" r="2" fill="white"/>
+
+      <!-- Nose cutout -->
+      <ellipse cx="236" cy="104" rx="12" ry="8" fill="black"/>
+      <!-- Nose highlight back in -->
+      <ellipse cx="233" cy="101" rx="4" ry="3" fill="white"/>
+
+      <!-- Mouth cutout -->
+      <path d="M224,113 Q236,122 248,113" stroke="black" stroke-width="3" fill="none"/>
+      <line x1="236" y1="112" x2="236" y2="118" stroke="black" stroke-width="2.5"/>
+
+      <!-- Bow tie cutout -->
+      <polygon points="220,130 236,137 220,144" fill="black"/>
+      <polygon points="252,130 236,137 252,144" fill="black"/>
+      <circle cx="236" cy="137" r="5" fill="white"/>
+
+    </mask>
+  </defs>
+
+  <!-- Single color shape with mask applied -->
+  <rect width="320" height="180" rx="20" fill="#cc0000" mask="url(#logo-mask)"/>
+</svg>

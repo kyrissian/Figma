@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140 130" width="140" height="130">
+  <defs>
+    <mask id="house-mask">
+      <rect width="140" height="130" fill="white"/>
+
+      <!-- Cut out sky/background inside roof triangle -->
+      <!-- Roof filled solid — keep it -->
+
+      <!-- Chimney hole (cut out center of chimney to show as outline) -->
+      <rect x="93" y="17" width="6" height="18" fill="black"/>
+
+      <!-- House body cutout (interior of walls) -->
+      <rect x="14" y="57" width="112" height="66" fill="black"/>
+
+      <!-- Floor divider filled back in -->
+      <rect x="14" y="87" width="112" height="5" fill="white"/>
+
+      <!-- GROUND FLOOR windows filled back in -->
+      <rect x="16" y="97" width="20" height="16" rx="2" fill="white"/>
+      <rect x="96" y="97" width="20" height="16" rx="2" fill="white"/>
+
+      <!-- Window pane lines cut out -->
+      <line x1="26" y1="97" x2="26" y2="113" stroke="black" stroke-width="2"/>
+      <line x1="16" y1="105" x2="36" y2="105" stroke="black" stroke-width="2"/>
+      <line x1="106" y1="97" x2="106" y2="113" stroke="black" stroke-width="2"/>
+      <line x1="96" y1="105" x2="116" y2="105" stroke="black" stroke-width="2"/>
+
+      <!-- Door filled back in -->
+      <rect x="55" y="95" width="22" height="28" rx="3" fill="white"/>
+      <!-- Door cutout interior -->
+      <rect x="58" y="98" width="16" height="22" rx="2" fill="black"/>
+      <!-- Door knob back in -->
+      <circle cx="71" cy="110" r="2" fill="white"/>
+
+      <!-- SECOND FLOOR windows filled back in -->
+      <rect x="16" y="61" width="20" height="16" rx="2" fill="white"/>
+      <rect x="60" y="61" width="20" height="16" rx="2" fill="white"/>
+      <rect x="96" y="61" width="20" height="16" rx="2" fill="white"/>
+
+      <!-- Second floor window pane lines cut out -->
+      <line x1="26" y1="61" x2="26" y2="77" stroke="black" stroke-width="2"/>
+      <line x1="16" y1="69" x2="36" y2="69" stroke="black" stroke-width="2"/>
+      <line x1="70" y1="61" x2="70" y2="77" stroke="black" stroke-width="2"/>
+      <line x1="60" y1="69" x2="80" y2="69" stroke="black" stroke-width="2"/>
+      <line x1="106" y1="61" x2="106" y2="77" stroke="black" stroke-width="2"/>
+      <line x1="96" y1="69" x2="116" y2="69" stroke="black" stroke-width="2"/>
+
+    </mask>
+  </defs>
+
+  <!-- Roof -->
+  <polygon points="70,8 5,55 135,55" fill="#4259bd"/>
+  <!-- Chimney -->
+  <rect x="90" y="14" width="12" height="26" fill="#4259bd"/>
+  <!-- House walls -->
+  <rect x="10" y="53" width="120" height="72" fill="#4259bd" mask="url(#house-mask)"/>
+  <!-- Reapply floor divider and windows on top -->
+  <rect x="14" y="87" width="112" height="5" fill="#4259bd"/>
+
+</svg>

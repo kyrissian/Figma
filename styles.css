@@ -21,14 +21,13 @@ body {
   background-color: #1b1b1b;
   height: 70px;
   border-radius: 0 0 8px 8px;
-  gap: 20%;
-  /*width: min(84%, 1280px);*/
+  gap: 1%;
+  width: min(84%, 1280px);
   margin: 0 auto;
-  width: 1110px;
 }
 
 .pages {
-  margin-left: 95px;
+  margin: 95px;
 }
 
 .pages ul {
@@ -63,6 +62,7 @@ body {
   display: flex;
   align-items: center;
   gap: 25px;
+  margin-right: 95px;
 }
 
 /* Main Styles */
@@ -174,16 +174,24 @@ body {
   filter: grayscale(100%) brightness(0) invert(61%);
 }
 
-/* Case Studies styling */
+/* Case Studies page styling */
 .case-studies {
   background-color: white;
+}
+
+.case-studies h1 {
+  font-family: Raleway, sans-serif;
+  font-size: 34px;
+  font-weight: 800;
+  line-height: 100%;
+  font-style: extrabold;
+  color: #ffffff;
+  padding-bottom: 10px;
 }
 
 .case-header {
   display: flex;
   flex-direction: column;
-  font-family: Raleway, sans-serif;
-  color: #9c9c9c;
   justify-content: center;
   align-items: center;
   text-align: center;
@@ -197,53 +205,218 @@ body {
   font-weight: 400;
   line-height: 24px;
   letter-spacing: 1%;
+  width: 570px;
+  color: #9c9c9c;
 }
 
 .case-studies-container {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
 }
 
-.case-study-container {
+.case-study-container,
+.case-study-container2 {
   display: flex;
-  padding: 30px;
-  height: 300px;
-  width: 445px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  width: 100%;
+  max-width: 900px;
   margin-bottom: 80px;
 }
 
 .case-study-container2 {
-  display: flex;
   flex-direction: row-reverse;
-  padding: 30px;
-  height: 300px;
-  width: 445px;
-  margin-bottom: 80px;
+}
+
+h2 {
+  font-family: Raleway, sans-serif;
+  font-size: 24px;
+  font-weight: 800;
+  font-style: extrabold;
+  color: #080808;
+  padding-bottom: 10px;
+  gap: 10px;
 }
 
 .work {
-  padding: 30px;
-  height: 300px;
-  width: 445px;
+  flex: 1;
 }
 
-button .case-field1 {
+.work p {
   font-family: "IBM Plex Mono", monospace;
-  font-size: 12px;
-  font-weight: 700;
-  color: rgb(237, 7, 184);
-  background-color: #e798d5;
-  padding: 21px 64px;
-  width: 63%;
-  border-radius: 50px;
-  box-shadow: 0 8px 30px 0 rgba(0, 0, 0, 0.1);
-  margin-top: 20px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 1%;
+  color: #9c9c9c;
+  padding-bottom: 20px;
 }
 
 .work-image img {
   height: 300px;
   width: 445px;
   border-radius: 8px;
+}
+
+/* Button Styles */
+.case-field1,
+.case-field2,
+.case-field3 {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 10px 10px;
+  width: 63%;
+  border-radius: 60px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border: none;
+  width: fit-content;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+}
+
+.case-field1 {
+  color: #ffa217;
+  background-color: #fff6e9;
+}
+
+.case-field2 {
+  color: #000aff;
+  background-color: #d0e6ff;
+}
+
+.case-field3 {
+  color: #2ab090;
+  background-color: #e0fff8;
+}
+
+.view-case-study1,
+.view-case-study2,
+.view-case-study3 {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 14px;
+  font-weight: 700;
+  padding: 10px 24px;
+  width: 63%;
+  border-radius: 4px;
+  margin-top: 20px;
+  border: none;
+  gap: 10px;
+  align-items: center;
+  width: fit-content;
+}
+
+.view-case-study1 {
+  color: white;
+  background-color: #ff7c00;
+}
+
+.view-case-study2 {
+  color: white;
+  background-color: #000aff;
+}
+
+.view-case-study3 {
+  color: white;
+  background-color: #2ab090;
+}
+
+/* Testimonial page Styles */
+.testimonials {
+  background-color: black;
+}
+
+.test-header h1 {
+  font-family: Raleway, sans-serif;
+  font-size: 34px;
+  font-weight: 800;
+  line-height: 100%;
+  font-style: extrabold;
+  color: #ffffff;
+  padding-bottom: 10px;
+}
+
+.test-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 60px;
+  margin-top: 60px;
+}
+
+.test-header p {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 1%;
+  width: 570px;
+  color: #9c9c9c;
+}
+
+.test-container {
+  display: grid;
+  gap: 40px;
+  grid-template-columns: repeat(2, 1fr); /* 2 columns */
+  grid-template-rows: repeat(2, auto); /* 2 rows */
+  justify-items: center;
+  margin-left: 180px;
+  margin-right: 180px;
+}
+
+.testimonial {
+  border: 1px solid;
+  border-image-source: linear-gradient(
+    90deg,
+    #484848 1.24%,
+    rgba(27, 27, 27, 0) 100%
+  );
+}
+
+.testimonial p {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 1%;
+  color: #9c9c9c;
+  padding-bottom: 20px;
+}
+
+.testimonial h1 {
+  font-family: Raleway, sans-serif;
+  font-size: 100px;
+  font-weight: 400;
+  line-height: 100%;
+  letter-spacing: 1%;
+  color: white;
+  padding-bottom: 10px;
+}
+
+.client {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.client img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.client h3 {
+  font-family: Raleway, sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 100%;
+  font-style: bold;
+  color: white;
 }
