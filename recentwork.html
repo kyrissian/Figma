@@ -9,6 +9,27 @@
     <link rel="stylesheet" href="styles.css" class="stylesheet">
 </head>
 
+
+<header class="navbar">
+    <nav class="pages">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="casestudies.html">Case Studies</a></li>
+            <li><a href="testimonials.html">Testimonials</a></li>
+            <li><a href="recentwork.html">Recent Work</a></li>
+            <li><a href="contact.html">Get In Touch</a></li>
+        </ul>
+    </nav>
+    <nav class="social">
+        <a href="https://www.linkedin.com/in/kathyharsh/"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="https://github.com/kyrissian"><i class="fa-brands fa-github"></i></a>
+        <a href="https://twitter.com/"><i class="fa-brands fa-x-twitter"></i></a>
+    </nav>
+    <i class="fas fa-bars menu-toggle" onclick="toggleMenu()"></i>
+</header>
+
+
+
 <body class="recent-work">
     <div class="recent-work-header">
         <h1>Recent Work</h1>
@@ -22,17 +43,22 @@
                 alt="Work 1">
             <h3>Enterprise Software Sales</h3>
             <p>Labore et dolore magna aliqua. sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
-            <button class="know-more">Know More ></button>
+            <button class="know-more"><a href="">Know More ></a></button>
         </div>
         <div class="work-item">
-            <img src="https://scontent-lax3-1.cdninstagram.com/v/t51.82787-15/619955107_18151951333443038_3599676513345200911_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=109&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiRkVFRC5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9&_nc_ohc=6uTHf2vcrP0Q7kNvwFkBJv8&_nc_oc=AdrXLS6tqau0uNsYSIdB-6EjztwHirP1A27fLh4VE6_OXTDakNmysmK4C5CkfA0yRHs&_nc_zt=23&_nc_ht=scontent-lax3-1.cdninstagram.com&edm=AM6HXa8EAAAA&_nc_gid=az8CnqldL2qCoBjFtY8_RQ&oh=00_Afw_W4jvVn7hLDEQtSkylDXsaqx0oEy2FEC5UWvftFRamQ&oe=69C20E8E"
-                alt="Work 2">
+            <img src="https://images.unsplash.com/photo-1583873463426-776e17c904cf?q=80&w=1074&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt=" Work 2">
             <h3>Whiskey Sales & Management</h3>
             <p>Rempor incididunt ut labore et dolore magna aliqua. sed do eiusmod tempor incididunt u.</p>
-            <button class="know-more">Know More ></button>
+            <button class="know-more"><a href="">Know More ></a></button>
         </div>
     </div>
-
+    <script>
+        function toggleMenu() {
+            const pages = document.querySelector(".pages");
+            pages.classList.toggle("active");
+        }
+    </script>
 </body>
 
 </html>

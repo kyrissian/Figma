@@ -9,6 +9,25 @@
     <link rel="stylesheet" href="styles.css" class="stylesheet">
 </head>
 
+<header class="navbar">
+    <nav class="pages">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="casestudies.html">Case Studies</a></li>
+            <li><a href="testimonials.html">Testimonials</a></li>
+            <li><a href="recentwork.html">Recent Work</a></li>
+            <li><a href="contact.html">Get In Touch</a></li>
+        </ul>
+    </nav>
+    <nav class="social">
+        <a href="https://www.linkedin.com/in/kathyharsh/"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="https://github.com/kyrissian"><i class="fa-brands fa-github"></i></a>
+        <a href="https://twitter.com/"><i class="fa-brands fa-x-twitter"></i></a>
+    </nav>
+    <i class="fas fa-bars menu-toggle" onclick="toggleMenu()"></i>
+</header>
+
+
 <body class="case-studies">
     <div class="case-header">
         <h1>Case Studies</h1>
@@ -28,7 +47,7 @@
                     et dolore magna
                     aliqua. sed do eiusmod tempor incididunt ut labore et dolore magna.
                 </p>
-                <button class="view-case-study1">View Case Study ></button>
+                <button class="view-case-study1"><a href="">View Case Study ></a></button>
             </div>
             <div class="work-image">
                 <img src="./images/lukas-muller-ONZG-HRGKNQ-unsplash.jpg" alt="Project 1 Image">
@@ -43,7 +62,7 @@
                     et dolore magna
                     aliqua. sed do eiusmod tempor incididunt ut labore et dolore magna.
                 </p>
-                <button class="view-case-study2">View Case Study ></button>
+                <button class="view-case-study2"><a href="">View Case Study ></a></button>
             </div>
             <div class="work-image">
                 <img src="./images/cova-software-H2_sbPnk-YE-unsplash.jpg" alt="Project 2 Image">
@@ -58,15 +77,21 @@
                     et dolore magna
                     aliqua. sed do eiusmod tempor incididunt ut labore et dolore magna.
                 </p>
-                <button class="view-case-study3">View Case Study ></button>
+                <button class="view-case-study3"><a href="">View Case Study ></a></button>
             </div>
             <div class="work-image">
-                <img src="https://scontent-lax3-2.cdninstagram.com/v/t51.82787-15/624771951_18323336347218086_8868941665681391238_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=106&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiRkVFRC5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9&_nc_ohc=Z2KXtmk8spYQ7kNvwF6Ik31&_nc_oc=AdmvoQJl-OlISM5Z4DFBxqr9q0Qoj8BEhT_2xOW2NxVfJCsbGlWFCV1HAjMVIQ7hPCQ&_nc_zt=23&_nc_ht=scontent-lax3-2.cdninstagram.com&edm=AM6HXa8EAAAA&_nc_gid=IdjX8GkhOMsjSWeggFAGOg&oh=00_Afx2HPUQtL8MtgM9poPn53maIG0vmcdz3_1JtkFz4aVwew&oe=69BDA8A6"
+                <img src="https://images.unsplash.com/photo-1608232385022-8ba61bec6c59?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                     alt="project 3 image">
             </div>
         </div>
 
     </main>
+    <script>
+        function toggleMenu() {
+            const pages = document.querySelector(".pages");
+            pages.classList.toggle("active");
+        }
+    </script>
 </body>
 
 </html>

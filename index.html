@@ -11,9 +11,10 @@
 
 <body>
     <header class="navbar">
+
         <nav class="pages">
             <ul>
-                <li><a href="#">Home</a></li>
+                <li><a href="index.html">Home</a></li>
                 <li><a href="casestudies.html">Case Studies</a></li>
                 <li><a href="testimonials.html">Testimonials</a></li>
                 <li><a href="recentwork.html">Recent Work</a></li>
@@ -25,6 +26,7 @@
             <a href="https://github.com/kyrissian"><i class="fa-brands fa-github"></i></a>
             <a href="https://twitter.com/"><i class="fa-brands fa-x-twitter"></i></a>
         </nav>
+        <i class="fas fa-bars menu-toggle" onclick="toggleMenu()"></i>
     </header>
     <main class="cover">
         <div class="left">
@@ -32,7 +34,7 @@
             <p>Intro text: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
                 labore et
                 dolore magna aliqua.</p>
-            <button class="lets-get-started">Let's Get Started ></button>
+            <button class="lets-get-started"><a href="casestudies.html">Let's Get Started ></a></button>
         </div>
         <div class="right">
             <img src="./images/IMG_7150.jpeg" alt="Kathy Booth">
@@ -50,6 +52,12 @@
             <button><img src="./images/house-stencil.svg" alt="home Logo"></button>
         </div>
     </footer>
+    <script>
+        function toggleMenu() {
+            const pages = document.querySelector(".pages");
+            pages.classList.toggle("active");
+        }
+    </script>
 </body>
 
 </html>
