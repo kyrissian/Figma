@@ -376,12 +376,15 @@ h2 {
 
 .test-container {
   display: grid;
-  gap: 40px;
+  gap: 50px;
   grid-template-columns: repeat(2, 1fr); /* 2 columns */
   grid-template-rows: repeat(2, auto); /* 2 rows */
   justify-items: center;
-  margin-left: 180px;
-  margin-right: 180px;
+  align-items: stretch;
+  margin-left: 5%;
+  margin-right: 5%;
+  height: 100%;
+  width: 90%;
 }
 
 .wrapper {
@@ -395,6 +398,7 @@ h2 {
   padding: 1px;
   display: block;
   width: 100%;
+  position: relative;
 }
 
 .testimonial {
@@ -402,6 +406,9 @@ h2 {
   border-radius: 11px;
   width: 100%;
   box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
 .testimonial p {
@@ -412,20 +419,21 @@ h2 {
   letter-spacing: 1%;
   color: #9c9c9c;
   padding-bottom: 20px;
-  margin-left: 20px;
-  padding-top: 35px;
+  margin-left: 30px;
+  padding-top: 40px;
 }
 
-.testimonial h1 {
-  font-family: Raleway, sans-serif;
+.testimonial::before {
+  content: "\201C"; /* the " character */
   position: absolute;
-  background: transparent;
+  top: -21px; /* lifts it up to sit on the border */
+  left: 5px;
+  font-family: Raleway, sans-serif;
   font-size: 100px;
   font-weight: 400;
-  line-height: 100%;
-  letter-spacing: 1%;
+  line-height: 1;
   color: white;
-  padding-top: -20px;
+  padding: 0 8px; /* a little breathing room so border doesn't touch the glyph */
 }
 
 .client {
@@ -434,6 +442,7 @@ h2 {
   gap: 20px;
   padding-bottom: 30px;
   margin-left: 30px;
+  margin-top: auto;
 }
 
 .client img {
@@ -680,8 +689,19 @@ i {
   .pages ul {
     gap: 45px;
   }
+  .cover {
+    padding-top: 50px;
+    gap: 20px;
+    padding-bottom: 30px;
+  }
   .cover .left button {
     width: 80%;
+  }
+}
+
+@media screen and (max-width: 1098px) {
+  .cover .right {
+    padding-right: 100px;
   }
 }
 
@@ -699,21 +719,24 @@ i {
     align-items: center;
     height: 100px;
   }
+  .navbar .social {
+    margin-right: 0px;
+  }
   .pages {
     margin: 20px;
   }
   .cover .left {
-    padding-right: 50px;
-    padding-left: 50px;
+    padding-right: 30px;
+    padding-left: 70px;
   }
   .cover .right {
-    padding-right: 50px;
-    padding-left: 50px;
+    padding-right: 70px;
+    padding-left: 30px;
   }
   .cover {
-    padding-top: 20px;
+    padding-top: 40px;
     gap: 0px;
-    padding-bottom: 60px;
+    padding-bottom: 50px;
   }
   .worked-with h3 {
     margin-top: 50px;
@@ -722,20 +745,78 @@ i {
   }
   .logos {
     margin-bottom: 150px;
-    gap: 10px;
+    gap: 20px;
   }
   .logos button {
-    width: 140px;
-    height: 50px;
+    width: 150px;
+    height: 70px;
   }
+  footer {
+    align-items: flex-start;
+  }
+  .logos {
+    margin-left: 70px;
+  }
+
   .test-container {
     margin-left: 70px;
     margin-right: 30px;
     margin-bottom: 100px;
   }
   .work-container .work-item img {
-    width: 330px;
-    height: 260px;
+    width: 360px;
+    height: 280px;
+  }
+  .work-item .know-more {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 950px) {
+  .logos button {
+    width: 120px;
+    height: 60px;
+  }
+  footer {
+    align-items: flex-start;
+  }
+  .logos {
+    align-self: center;
+  }
+  .case-study-container,
+  .case-study-container2 {
+    flex-direction: column;
+    margin-left: 50px;
+  }
+  .case-study-container .work,
+  .case-study-container2 .work {
+    text-align: center;
+  }
+  .case-study-container p,
+  .case-study-container2 p {
+    margin-left: 60px;
+    margin-right: 60px;
+  }
+  .testimonial {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 815px) {
+  .cover .left {
+    padding-left: 30px;
+    padding-right: 15px;
+  }
+  .cover .right {
+    padding-right: 30px;
+    padding-left: 15px;
+  }
+  .work-container .work-item img {
+    width: 300px;
+    height: 240px;
+  }
+  .work-item .know-more {
+    width: 50%;
   }
 }
 
@@ -746,11 +827,44 @@ i {
   .navbar {
     width: 90%;
   }
+  .cover .left button {
+    width: 85%;
+  }
+  .cover .right img {
+    width: 275px;
+    height: 275px;
+  }
+  .logos {
+    margin-left: 10px;
+  }
   .test-container {
     grid-template-columns: 1fr; /* 1 column */
     grid-template-rows: repeat(4, auto); /* 4 rows */
     margin-left: 50px;
     margin-right: 50px;
+  }
+}
+
+@media screen and (max-width: 725px) {
+  .cover .right img {
+    width: 250px;
+    height: 250px;
+  }
+  .logos button {
+    width: 100px;
+    height: 50px;
+  }
+  .logos {
+    margin-left: 2px;
+    gap: 10px;
+  }
+  .contact-header {
+    margin-bottom: 40px;
+  }
+  .work-container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 }
 
@@ -761,11 +875,49 @@ i {
   .navbar {
     width: 100%;
   }
+  .cover {
+    flex-direction: column;
+  }
+  .cover .right {
+    margin-top: 40px;
+  }
+  .cover .left {
+    width: 90%;
+  }
   .test-container {
     margin-left: 50px;
   }
+  .case-header p {
+    width: 90%;
+  }
   .test-header p {
     width: 90%;
+  }
+  .recent-work-header p {
+    width: 90%;
+  }
+  .contact-form {
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+  .contact-header p {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 560px) {
+  .logos {
+    flex-direction: column;
+    gap: 30px;
+    padding-bottom: 30px;
+  }
+  .logos button {
+    width: 160px;
+    height: 60px;
+  }
+  footer {
+    padding-top: 220px;
+    align-items: center;
   }
 }
 
@@ -779,6 +931,7 @@ i {
     width: 100%;
     justify-content: center;
     flex-direction: row;
+    gap: 200px;
   }
   .social {
     justify-content: center;
@@ -800,5 +953,33 @@ i {
     left: 0;
     width: 100%;
     padding: 20px 0;
+  }
+  .work-image img {
+    height: 200px;
+    width: 330px;
+  }
+  .contact-header {
+    margin-top: 40px;
+  }
+  .contact-form button {
+    width: 70%;
+  }
+}
+
+@media screen and (max-width: 435px) {
+  /* .navbar { 
+   gap: 100px;
+  } */
+  .case-study-container,
+  .case-study-container2 {
+    align-items: center;
+    text-align: center;
+    margin-left: 0px;
+  }
+  .cover .left button {
+    width: 100%;
+  }
+  .contact-form button {
+    width: 80%;
   }
 }
