@@ -57,6 +57,12 @@
             const pages = document.querySelector(".pages");
             pages.classList.toggle("active");
         }
+
+        document.querySelectorAll(".pages ul a").forEach(link => {
+            link.addEventListener("click", () => {
+                document.querySelector(".pages").classList.remove("active");
+            });
+        });
     </script>
 </body>
 <footer class="footer">

@@ -945,6 +945,9 @@ i {
   .pages.active {
     display: flex;
   }
+  .pages.active ~ .menu-toggle {
+    visibility: hidden;
+  }
   .pages ul {
     flex-direction: column;
     background-color: #1b1b1b;
@@ -967,9 +970,9 @@ i {
 }
 
 @media screen and (max-width: 435px) {
-  /* .navbar { 
-   gap: 100px;
-  } */
+  .navbar {
+    gap: 100px;
+  }
   .case-study-container,
   .case-study-container2 {
     align-items: center;
