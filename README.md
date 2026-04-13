@@ -1,6 +1,10 @@
-# Kathy Booth — Personal Portfolio
+# Figma Project — Kathy Booth Personal Portfolio
 
-A multi-page personal portfolio website built from a Figma design template, rebranded and coded from scratch using HTML, CSS, and JavaScript. This project showcases Kathy's 25+ years of experience in UX/UI design and sales, and demonstrates her ability to translate a design into clean, responsive code.
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+![Google Fonts](https://img.shields.io/badge/Google_Fonts-4285F4?style=for-the-badge&logo=google&logoColor=white)
+![Font Awesome](https://img.shields.io/badge/Font_Awesome-528DD7?style=for-the-badge&logo=fontawesome&logoColor=white)
 
 ---
 
@@ -88,16 +92,6 @@ The testimonials page includes several custom styling touches:
 - A CSS `::before` pseudo-element places a large opening quotation mark (`"`) on the top border of each card using `position: absolute` and `top: -21px`
 - Cards in the same grid row are forced to equal height via `align-items: stretch` on the grid container
 - Each card uses `display: flex; flex-direction: column; height: 100%` with `margin-top: auto` on `.client` to pin the client info to the bottom regardless of text length
-
----
-
-## Tech Stack
-
-- **HTML5**
-- **CSS3** (Flexbox, CSS Grid, media queries, pseudo-elements)
-- **Vanilla JavaScript** (hamburger menu toggle, auto-close on link click)
-- **Google Fonts** — Raleway, IBM Plex Mono, Delius
-- **Font Awesome** — social icons and hamburger menu icon
 
 ---
 
